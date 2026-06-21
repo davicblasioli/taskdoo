@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taskdoo — Encontre o profissional certo para qualquer tarefa</title>
+<meta name="description" content="Taskdoo conecta clientes a prestadores de serviços qualificados: encanadores, eletricistas, pintores e muito mais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+
+    <a href="#" class="logo" data-route="home" aria-label="Taskdoo - Início">
+      <svg class="logo__icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Ícone de parafuso (placeholder oficial até a logo do usuário ser integrada) -->
+        <path d="M24 4L40 13V35L24 44L8 35V13L24 4Z" stroke="#000" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="24" cy="24" r="7" stroke="#2563EB" stroke-width="2.5"/>
+        <path d="M24 17V14M24 34V31M31 21L33.5 19.5M17 27L14.5 28.5M31 27L33.5 28.5M17 21L14.5 19.5" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span class="logo__text">Taskdoo</span>
+    </a>
+
+    <form class="header-search" id="headerSearchForm" role="search">
+      <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.3-4.3M19 11a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="text" id="headerSearchInput" placeholder="Buscar serviço ou profissional..." autocomplete="off">
+    </form>
+
+    <nav class="header__actions">
+      <button class="btn btn--ghost" id="btnLogin">Entrar</button>
+      <button class="btn btn--primary" id="btnSignup">Cadastrar</button>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== APP ROOT (SPA) ===================== -->
+<main id="app"></main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="logo__text logo__text--footer">Taskdoo</span>
+      <p>Conectando quem precisa a quem resolve.</p>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h4>Categorias</h4>
+        <ul id="footerCategories"></ul>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Sobre o Taskdoo</a></li>
+          <li><a href="#">Como funciona</a></li>
+          <li><a href="#">Seja um prestador</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#">Central de ajuda</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Termos de uso</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">© 2026 Taskdoo. Todos os direitos reservados.</div>
+</footer>
+
+<!-- ===================== MODAL: LOGIN / CADASTRO ===================== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="authModal">
+    <button class="modal__close" id="modalClose" aria-label="Fechar">&times;</button>
+    <div class="modal__tabs">
+      <button class="modal__tab is-active" data-tab="login">Entrar</button>
+      <button class="modal__tab" data-tab="signup">Cadastrar</button>
+    </div>
+    <form class="modal__form">
+      <label>E-mail<input type="email" placeholder="voce@email.com"></label>
+      <label>Senha<input type="password" placeholder="••••••••"></label>
+      <button type="submit" class="btn btn--primary btn--block">Continuar</button>
+    </form>
+    <p class="modal__hint">Protótipo de demonstração — sem backend conectado ainda.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
